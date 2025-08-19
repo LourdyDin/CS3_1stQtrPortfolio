@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2> Q1 2nd Graded Exercise submitted by Lourdy of Cesium</h2>
+
+    <label> Meal Price:
+        <input id="MealPrice" /> </p>
+    </label>
+    <label> Tip:
+        <input id="Tip" /> </p>
+    </label>
+    <label> Service Change:
+        <input id="ServiceChange" /> </p>
+    </label>
+
+    <button onclick="totalMeal()">Accept Input</button><br><br>
+
+    <p>Total Meal: <span id="TotalCost"></span></p>
+
+    <script>
+
+    function totalMeal() {
+    let MealPrice = Number(document.getElementById("MealPrice").value);
+    let Tip = Number(document.getElementById("Tip").value);      
+    let ServiceChange = Number(document.getElementById("ServiceChange").value); 
+
+    let totalCost = MealPrice + Tip + (ServiceChange / 100 * MealPrice);
+    let roundedCost = totalCost.toFixed(2);
+
+    document.getElementById("TotalCost").textContent = roundedCost;
+
+}
+
+</script>
+</body>
+</html>

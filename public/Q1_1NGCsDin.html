@@ -1,0 +1,42 @@
+<body>
+    <p> Hello</p>
+    <script>
+        // let, var, const(All of them are global)
+        
+        let age = window.prompt("Is 6 you're age?");
+        let maxAge = window.prompt("Is 67 you're max age");
+        let numPerDay = window.prompt("Is 670 the number per day?");
+
+        let confirmValues = window.confirm(`Is ${Age} really you're age and is ${maxAge} really you're max age and is ${numPerDay} really the number per day?`);
+
+        let totalRequired = (numPerDay * 365) * (maxAge - age)
+
+        if (confirmValues == true){
+            document.write("You will need " + totalRequired + " cup of rice to last you until the ripe old age of " + maxAge);
+        }
+        else{
+            window.alert("Do the program again");
+        }
+         // window.alert or document.write("My Age is " + aga) <br/>, \n for alert and for console.log        $(variable) if you use ` `
+         // window.prompt("Enter the name of your favorite person ", "Anne Grace"); window.confirm(`Is ${name} really your favorite person);
+        /* <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="John Doe">
+        </form>
+        */
+       
+       /* <h2>Sample use of of the Input tag </h2>
+        <label> What is your greeting?
+            <input id="greeting" />
+        </label>
+        <button onclick="checkGreet()"> Show greeting </button> </p>
+        <p>Result: <span id="greet"> </span> </p>
+        <script>
+            function checkGreet(){
+                let dGret = alert(document.getElementById("greeting").value)
+                document.write(dGreet)
+            }
+            */ 
+
+    </script>
+</body>
