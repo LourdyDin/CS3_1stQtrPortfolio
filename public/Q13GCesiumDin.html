@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h2>Q1 3rd Graded Exercise submitted by Lourdy of Cesium</h2>
+
+  <p>Guess the number: ****</p>
+  <p>The number is from 1 to 100</p>
+
+  <label> Enter your guess:</label> </p>
+  <input id="guess" /> </p>
+  <button onclick="checkIt()">Check It</button>
+
+  <p>Result: <span id="result"></span></p>
+
+  <script>
+
+    var dNumber = Math.floor(Math.random() * 100) + 1;
+
+    function checkIt() {
+      var userGuess = document.getElementById("guess").value;
+
+      var guess = Number(userGuess);
+
+      if (isNaN(guess)) {
+        alert("Please enter a valid number.");
+      } else if (guess < 1 || guess > 100) {
+        alert("Your guess must be between 1 and 100.");
+      } else if (guess == dNumber) {
+        document.getElementById("result").innerHTML = "You are correct";
+      } else if (guess > dNumber) {
+        document.getElementById("result").innerHTML = "Lower";
+      } else {
+        document.getElementById("result").innerHTML = "Higher";
+      }
+    }
+  </script>
+
+</body>
+
+</html>

@@ -14,15 +14,24 @@
         <input id="ServiceChange" /> </p>
     </label>
 
-    <button onclick="MealPrice()"> Accept Input </button> </p>
-    <p>Total Meal: <span id="MealPrice"> </span> </p>
+    <button onclick="totalMeal()">Accept Input</button><br><br>
+
+    <p>Total Meal: <span id="TotalCost"></span></p>
 
     <script>
-    function totalMeal(){
-        let dGret = alert(document.getElementById("greeting").value)
-        document.write(dGreet)
-    }
-    </script>
 
+    function totalMeal() {
+    let MealPrice = Number(document.getElementById("MealPrice").value);
+    let Tip = Number(document.getElementById("Tip").value);      
+    let ServiceChange = Number(document.getElementById("ServiceChange").value); 
+
+    let totalCost = MealPrice + Tip + (ServiceChange / 100 * MealPrice);
+    let roundedCost = totalCost.toFixed(2);
+
+    document.getElementById("TotalCost").textContent = roundedCost;
+
+}
+
+</script>
 </body>
 </html>
